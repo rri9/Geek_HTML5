@@ -46,9 +46,8 @@
             </p>
           </div>
           <div class="video">
-            <!-- Вставил соответствующий объект, т.к. в макете указано видео -->
             <video controls>
-              <source src="video/video-7.mp4" type="video/mp4" />
+              <source src="video/skeleton.mp4" type="video/mp4" />
               This browser does not support this video element.
             </video>
           </div>
@@ -329,12 +328,20 @@
               required
               placeholder="Your email:"
             />
+            <input id="theme" class="short-input" list="themes" name="theme" placeholder="Select subject">
+            <input type="date" class="short-input" name="date" id="date">
+            <input type="color" class="short-input" name="color" id="color">
+            <datalist id="themes">
+              <option value="Sales"></option>
+              <option value="Saggestions"></option>
+              <option value="Errors"></option>
+            </datalist>
             <textarea
               name="message"
               rows="6"
               placeholder="Your message:"
             ></textarea>
-            <button name="send-button">Send</button>
+            <button name="send-button" class="form-center">Send</button>
           </form>
           <div class="links">
             <div class="link">
