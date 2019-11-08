@@ -9,6 +9,26 @@
   padding: 0;
   font-family: ArialMT;
 }
+.video-bg {
+  position: fixed;
+  width: 100vw;
+}
+.video-bg video {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+}
+.on-video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.shadowed {
+  text-shadow: white 1px 1px 0px, white 1px -1px 0px, white -1px 1px 0px, white -1px -1px 0px;
+}
 .wrapper {
   width: 1280px;
   margin: 0 auto;
@@ -108,7 +128,7 @@ h2 {
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  height: 270px;
+  height: 330px;
 }
 .main .pluses .item {
   display: -webkit-box;
@@ -120,6 +140,7 @@ h2 {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   width: 563px;
+  height: 30%;
 }
 .main .pluses .item .icon {
   width: 32px;
@@ -157,7 +178,7 @@ h2 {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 331px;
+  height: 370px;
 }
 .main .screenshots img {
   float: left;
@@ -334,6 +355,8 @@ h2 {
 footer {
   padding-top: 60px;
   background-color: #445161;
+  --form-width: 500px;
+  --form-short-width: 150px;
 }
 footer h2 {
   color: #fff;
@@ -350,7 +373,7 @@ footer .content {
   padding: 0 250px;
 }
 footer form {
-  width: 500px;
+  width: var(--form-width);
   height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,9 +381,6 @@ footer form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
@@ -369,6 +389,9 @@ footer form {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 footer input,
 footer textarea {
@@ -382,29 +405,31 @@ footer textarea {
   color: #445162;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 10px;
+}
+footer .short-input {
+  width: var(--form-short-width);
+}
+footer .form-center {
+  margin-left: calc(var(--form-width)/2 - var(--form-short-width)/2);
 }
 footer textarea {
-  height: 170px;
-  padding-left: 10px;
+  height: 140px;
 }
 footer input::-webkit-input-placeholder {
-  padding-left: 10px;
   vertical-align: top;
 }
 footer input:-ms-input-placeholder {
-  padding-left: 10px;
   vertical-align: top;
 }
 footer input::-ms-input-placeholder {
-  padding-left: 10px;
   vertical-align: top;
 }
 footer input::placeholder {
-  padding-left: 10px;
   vertical-align: top;
 }
 footer button {
-  width: 140px;
+  width: var(--form-short-width);
   height: 40px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
