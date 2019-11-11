@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+}
+.clearfloat::after {
+  /* Отмена float'ов */
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+}
+.newLine {
+  display: block;
+}
+header {
+  display: grid;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header .logo {
+  width: 216px;
+}
+header .logo img {
+  width: 44px;
+  height: 42px;
+  float: left;
+  margin-right: 3px;
+}
+header .logo .siteName {
+  font-family: Montserrat;
+  font-size: 31.5px;
+  font-weight: 800;
+  line-height: 0.9em;
+  overflow: hidden;
+}
+header .logo .siteName .siteName1 {
+  color: #1a9bdc;
+}
+header .logo .siteName .siteName2 {
+  color: #494848;
+}
+header .logo .siteName .siteName3 {
+  text-transform: uppercase;
+  font-size: 14.5px;
+  letter-spacing: 5.22px;
+  color: #282828;
+  line-height: 1.2em;
+  margin-left: 2px;
+}
+header .links {
+  width: fit-content;
+}
+header .links .icon {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 51px;
+  font-family: FontAwesomeFree;
+  font-size: 27px;
+  background-color: #1a9bdc;
+  color: #fff;
+}
+header .menu {
+  font-family: Nexa;
+}
+header .socialsItem {
+  font-family: FontAwesome;
+}
+/*# sourceMappingURL=./common.css.map */

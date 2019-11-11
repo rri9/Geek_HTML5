@@ -1,18 +1,8 @@
-@font-face {
-  font-family: ArialMT;
-  src: url("../fonts/ArialMT.eot?") format("eot"), url("../fonts/ArialMT.woff") format("woff"), url("../fonts/ArialMT.ttf") format("truetype"), url("../fonts/ArialMT.svg") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
 }
-html {
-  height: 100%;
-}
 body {
-  height: 100%;
   display: grid;
   grid-template-rows: 250px minmax(300px, 1fr) 750px;
 }
