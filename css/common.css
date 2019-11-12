@@ -2,6 +2,14 @@ html,
 body {
   height: 100%;
 }
+.narrow {
+  width: 1200px;
+}
+@media (max-width: 1199px) {
+  .narrow {
+    width: 600px;
+  }
+}
 .clearfloat::after {
   /* Отмена float'ов */
   content: "";
@@ -14,36 +22,33 @@ body {
 .newLine {
   display: block;
 }
-header {
-  display: grid;
-}
 header a {
   text-decoration: none;
-  color: black;
 }
 header .logo {
   width: 216px;
+  float: left;
 }
-header .logo img {
+header img {
   width: 44px;
   height: 42px;
   float: left;
   margin-right: 3px;
 }
-header .logo .siteName {
+header .siteName {
   font-family: Montserrat;
   font-size: 31.5px;
   font-weight: 800;
   line-height: 0.9em;
   overflow: hidden;
 }
-header .logo .siteName .siteName1 {
+header .siteName .siteName1 {
   color: #1a9bdc;
 }
-header .logo .siteName .siteName2 {
+header .siteName .siteName2 {
   color: #494848;
 }
-header .logo .siteName .siteName3 {
+header .siteName .siteName3 {
   text-transform: uppercase;
   font-size: 14.5px;
   letter-spacing: 5.22px;
@@ -51,8 +56,26 @@ header .logo .siteName .siteName3 {
   line-height: 1.2em;
   margin-left: 2px;
 }
+@media (max-width: 1199px) {
+  header {
+    float: none;
+  }
+}
 header .links {
-  width: fit-content;
+  display: flex;
+  justify-content: flex-end;
+}
+header .links :not(:last-child) {
+  margin-right: 50px;
+}
+header .links .workTime .iconText {
+  width: 235px;
+}
+header .links .mailUs .iconText {
+  width: 160px;
+}
+header .links .call .iconText {
+  width: 120px;
 }
 header .links .icon {
   width: 51px;
@@ -64,11 +87,72 @@ header .links .icon {
   font-size: 27px;
   background-color: #1a9bdc;
   color: #fff;
+  float: left;
+  margin-right: 20px;
 }
-header .menu {
+header .links .call .icon {
+  font-weight: bold;
+}
+header .links .iconText,
+header .links a {
+  font-family: "Open Sans";
+  font-size: 15px;
+  line-height: 1.8;
+  color: #6a6a6a;
+  overflow: hidden;
+}
+header .links .iconText h4,
+header .links a h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media (max-width: 1199px) {
+  header .links {
+    display: block;
+  }
+}
+header .line {
+  height: 2px;
+  opacity: 0.31;
+  background-color: #c2c2c2;
+  margin: 25px 0 30px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .menu {
   font-family: Nexa;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
 }
-header .socialsItem {
+header nav .menu :not(:last-child) {
+  margin-right: 30px;
+}
+header nav .menu a {
+  color: #6c6c6c;
+}
+header nav .menu .menuItem a:hover {
+  color: #262626;
+}
+header nav .menu .menuItemActive {
+  color: #262626;
+}
+header nav .socials {
+  display: flex;
+}
+header nav .socials :not(:last-child) {
+  margin-right: 20px;
+}
+header nav .socials .socialsItem {
   font-family: FontAwesome;
+  font-size: 23.5px;
+  letter-spacing: 0.59px;
+  text-align: center;
+  color: #191919;
+}
+header nav .socials .socialsItem a {
+  color: black;
 }
 /*# sourceMappingURL=./common.css.map */

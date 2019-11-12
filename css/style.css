@@ -3,7 +3,9 @@
   padding: 0;
 }
 body {
+  width: auto;
   display: grid;
   grid-template-rows: 250px minmax(300px, 1fr) 750px;
+  justify-items: center;
 }
 /*# sourceMappingURL=./style.css.map */
