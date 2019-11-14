@@ -7,6 +7,7 @@ a {
 }
 .narrow {
   width: 1200px;
+  margin: 0 auto;
 }
 @media (max-width: 1199px) {
   .narrow {
@@ -56,11 +57,20 @@ a {
   line-height: 1.2em;
   margin-left: 2px;
 }
+.icon {
+  border-radius: 50%;
+  text-align: center;
+  font-family: FontAwesomeFree;
+}
+header {
+  padding-top: 80px;
+}
 @media (max-width: 1199px) {
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: unset;
   }
 }
 header .links {
@@ -87,10 +97,7 @@ header .links .call .iconText {
 header .links .icon {
   width: 51px;
   height: 51px;
-  border-radius: 50%;
-  text-align: center;
   line-height: 51px;
-  font-family: FontAwesomeFree;
   font-size: 27px;
   background-color: #1a9bdc;
   color: #fff;

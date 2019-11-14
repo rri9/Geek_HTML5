@@ -46,6 +46,16 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.eot");
+  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
+    url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff"),
+    url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
   font-family: OpenSans;
   src: url("../fonts/OpenSans-Regular.eot");
   src: local("Open Sans Regular"), local("OpenSans-Regular"),
